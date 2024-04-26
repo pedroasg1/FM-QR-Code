@@ -1,0 +1,85 @@
+@use 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: variables.$font-default;
+    width: 100%;
+    min-height: 100vh;
+    background: variables.$light-gray;
+}
+
+.card_qr{
+    position: absolute;
+    width: 400px;
+    height: 620px;
+    background: variables.$white;
+    margin: 0 auto;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__image{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    &__title{
+        text-align: center;
+        color: variables.$dark-blue;
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    &__description{
+        color: variables.$grayish-blue;
+        text-align: center;
+        font-size: 21px;
+        margin-top: 20px;
+    }
+}
+
+.attribution{
+    display: flex;
+    justify-content: center;
+    transform: translateY(900px);
+}
+
+
+@media screen and (max-width: 375px) {
+    .card_qr{
+        width: 330px;
+        height: 520px;
+
+        &__title{
+            font-size: 22px;
+        }
+    
+        &__description{
+            font-size: 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card_qr{
+        width: 290px;
+        height: 460px;
+
+        &__title{
+            font-size: 19px;
+        }
+    
+        &__description{
+            font-size: 15px;
+        }
+    }
+}
